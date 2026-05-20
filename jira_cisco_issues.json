@@ -1,0 +1,706 @@
+[
+  {
+    "cve_id": "CVE-2026-20010",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20010",
+      "description": "CVSS Score: 7.4\nSeverity: HIGH\n\nA vulnerability in the Link Layer Discovery Protocol (LLDP) feature of Cisco NX-OS Software could allow an unauthenticated, adjacent attacker to cause the LLDP process to restart, which could cause an affected device to reload unexpectedly.\r\n\r\nThis vulnerability is due to improper handling of specific fields in an LLDP frame. An attacker could exploit this vulnerability by sending a crafted LLDP packet to an interface of an affected device. A successful exploit could allow the attacker to cause the device to reload, resulting in a denial of service (DoS) condition.\r\nNote:&nbsp;LLDP is a Layer 2 link protocol. To exploit this vulnerability, an attacker would need to be&nbsp;directly connected to an interface of an affected device, either physically or logically (for example, through a Layer 2 Tunnel configured to transport the LLDP protocol).",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20033",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20033",
+      "description": "CVSS Score: 7.4\nSeverity: HIGH\n\nA vulnerability in Cisco Nexus 9000 Series Fabric Switches in ACI mode could allow an unauthenticated, adjacent attacker to cause a denial of service (DoS) condition on an affected device.\r\n\r\nThis vulnerability is due to insufficient validation when processing specific Ethernet frames. An attacker could exploit this vulnerability by sending a crafted Ethernet frame to the&nbsp;management interface of an affected device. A successful exploit could allow the attacker to cause the device to reload unexpectedly, resulting in a DoS condition.\r\nNote: Only the out-of-band (OOB) management interface is affected.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20048",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20048",
+      "description": "CVSS Score: 7.7\nSeverity: HIGH\n\nA vulnerability in the Simple Network Management Protocol (SNMP) subsystem of Cisco Nexus 9000 Series Fabric Switches in ACI mode could allow an authenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.\r\n\r\nThis vulnerability is due to improper processing when parsing SNMP requests. An attacker could exploit this vulnerability by continuously sending SNMP queries&nbsp;to a specific MIB of an affected device. A successful exploit could allow the attacker to cause a kernel panic on the device, resulting in a reload and a&nbsp;DoS condition.\r\nNote: This vulnerability affects SNMP versions 1, 2c, and 3. To exploit&nbsp;this vulnerability through SNMPv1 or&nbsp;SNMPv2c, the attacker must have a valid read-only SNMP community string for the affected system. To exploit this vulnerability through SNMPv3, the attacker must have valid SNMP user credentials for the affected system.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20051",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20051",
+      "description": "CVSS Score: 7.4\nSeverity: HIGH\n\nA vulnerability with the Ethernet VPN (EVPN) Layer 2 ingress packet processing of Cisco Nexus 3600 Platform Switches and Cisco Nexus 9500-R Series Switching Platforms could allow an unauthenticated, adjacent attacker to trigger a Layer 2 traffic loop.\r\n\r\nThis vulnerability is due to a logic error when processing a crafted Layer 2 ingress frame. An attacker could exploit this vulnerability by sending a stream of crafted Ethernet frames through the targeted device. A successful exploit could allow the attacker to cause a Layer 2 Virtual eXtensible LAN (VxLAN) traffic loop, which, in turn, could result in a denial of service (DoS) condition. This Layer 2 loop could oversubscribe the bandwidth on network interfaces, which would result in all data plane traffic being dropped. To exploit this vulnerability, the attacker must be Layer 2-adjacent to the affected device.\r\nNote:&nbsp;To stop active exploitation of this vulnerability, manual intervention is required to both stop the crafted traffic and flap all involved network interfaces. For additional assistance if a Layer 2 loop that is related to this vulnerability is suspected, contact the Cisco Technical Assistance Center (TAC) or the proper support provider.&nbsp;",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20126",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20126",
+      "description": "CVSS Score: 8.8\nSeverity: HIGH\n\nA vulnerability in Cisco Catalyst SD-WAN Manager could allow an authenticated, local attacker with low privileges to gain root privileges on the underlying operating system.\r\n\r\nThis vulnerability is due to an insufficient user authentication mechanism in the REST API. An attacker could exploit this vulnerability by sending a request to the REST API of the affected system. A successful exploit could allow the attacker to&nbsp;gain root privileges on the underlying operating system.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20127",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20127",
+      "description": "CVSS Score: 10.0\nSeverity: CRITICAL\n\nA vulnerability in the peering authentication in Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, and Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an unauthenticated, remote attacker to bypass authentication and obtain administrative privileges on an affected system.\r\n\r\nThis vulnerability exists because the peering authentication mechanism in an affected system is not working properly. An attacker could exploit this vulnerability by sending crafted requests to an affected system. A successful exploit could allow the attacker to log in to an affected Cisco Catalyst SD-WAN Controller as an internal, high-privileged, non-root&nbsp;user account. Using this account, the attacker could access NETCONF, which would then allow the attacker to manipulate network configuration for the SD-WAN fabric.&nbsp;",
+      "priority": {
+        "name": "Highest"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20128",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20128",
+      "description": "CVSS Score: 7.5\nSeverity: HIGH\n\nA vulnerability in the Data Collection Agent (DCA) feature of Cisco Catalyst SD-WAN Manager could allow an unauthenticated, remote attacker to gain DCA user privileges on an affected system.\r\n\r\nThis vulnerability is due to the presence of a credential file for the DCA user on an affected system. An attacker could exploit this vulnerability by sending a crafted HTTP request and reading the file that contains the DCA password from that affected system. A successful exploit could allow the attacker to access another affected system and gain DCA user privileges.\r\nNote: Cisco Catalyst SD-WAN Manager releases 20.18 and later are not affected by this vulnerability.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20129",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20129",
+      "description": "CVSS Score: 9.8\nSeverity: CRITICAL\n\nA vulnerability in the API user authentication of Cisco Catalyst SD-WAN Manager could allow an unauthenticated, remote attacker to gain access to an affected system as a user who has the&nbsp;netadmin role.\r\n\r\nThe vulnerability is due to improper authentication for requests that are sent to the API. An attacker could exploit this vulnerability by sending a crafted request to the API of an affected system. A successful exploit could allow the attacker to execute commands with the privileges of the netadmin role.\r\nNote: Cisco Catalyst SD-WAN Manager releases 20.18 and later are not affected by this vulnerability.&nbsp;",
+      "priority": {
+        "name": "Highest"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20002",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20002",
+      "description": "CVSS Score: 8.1\nSeverity: HIGH\n\nA vulnerability in the web-based management interface of Cisco Secure FMC Software could allow an authenticated, remote attacker to conduct SQL injection attacks on an affected system.\r\n\r This vulnerability is due to inadequate validation of user-supplied input. An attacker could exploit this vulnerability by sending crafted requests to an affected device. A successful exploit could allow the attacker to obtain full access to the database and read certain files on the underlying operating system. To exploit this vulnerability, the attacker would need valid user credentials.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20014",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20014",
+      "description": "CVSS Score: 7.7\nSeverity: HIGH\n\nA vulnerability in the IKEv2 feature of Cisco Secure Firewall ASA Software and Cisco Secure FTD Software could allow an authenticated, remote attacker with valid VPN user credentials to cause a DoS condition on an affected device that may also impact the availability of services to devices elsewhere in the network.\r\n\r This vulnerability is due to the improper processing of IKEv2 packets. An attacker could exploit this vulnerability by sending crafted, authenticated IKEv2 packets to an affected device. A successful exploit could allow the attacker to exhaust memory, causing the device to reload.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20039",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20039",
+      "description": "CVSS Score: 8.6\nSeverity: HIGH\n\nA vulnerability in the VPN web server of Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Cisco Secure Firewall Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.\r\n\r\nThis vulnerability is due to ineffective memory management of the VPN web server. An attacker could exploit this vulnerability by sending a large number of&nbsp;crafted HTTP requests to an affected device. A successful exploit could allow the attacker to cause the device to reload, resulting in a DoS condition.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20049",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20049",
+      "description": "CVSS Score: 7.7\nSeverity: HIGH\n\nA vulnerability in the processing of Galois/Counter Mode (GCM)-encrypted Internet Key Exchange version 2 (IKEv2) IPsec traffic of Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Cisco Secure Firewall Threat Defense (FTD) Software could allow an authenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.\r\n\r This vulnerability is due to the allocation of an insufficiently sized block of memory. An attacker could exploit this vulnerability by sending crafted GCM-encrypted IPsec traffic to an affected device. A successful exploit could allow the attacker to cause an unexpected reload of the device, resulting in a DoS condition. To exploit this vulnerability, the attacker must have valid credentials to establish a VPN connection with the affected device.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20062",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20062",
+      "description": "CVSS Score: 7.2\nSeverity: HIGH\n\nA vulnerability in the CLI of Cisco Secure Firewall Adaptive Security Appliance (ASA) Software in multiple context mode could allow an authenticated, local attacker with administrative privileges in one context to copy files to or from another context, including configuration files.\r  \r This vulnerability is due to improper access controls for Secure Copy Protocol (SCP) operations when the CiscoSSH stack is enabled. An attacker could exploit this vulnerability by authenticating to a non-admin context of the device and issuing crafted SCP copy commands in that non-admin context. A successful exploit could allow the attacker to read, create, or overwrite sensitive files that belong to another context, including the admin and system contexts. The attacker cannot directly impact the availability of services pertaining to other contexts. To exploit this vulnerability, the attacker must have valid administrative credentials for a non-admin context.\r  \r Note: An attacker cannot list or enumerate files from another context and would need to know the exact file path, which increases the complexity of a successful attack.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20079",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20079",
+      "description": "CVSS Score: 10.0\nSeverity: CRITICAL\n\nA vulnerability in the web interface of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to bypass authentication and execute script files on an affected device to obtain root access to the underlying operating system.\r\n\r This vulnerability is due to an improper system process that is created at boot time. An attacker could exploit this vulnerability by sending crafted HTTP requests to an affected device. A successful exploit could allow the attacker to execute a variety of scripts and commands that allow root access to the device.",
+      "priority": {
+        "name": "Highest"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20082",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20082",
+      "description": "CVSS Score: 8.6\nSeverity: HIGH\n\nA vulnerability in the handling of the embryonic connection limits in Cisco Secure Firewall Adaptive Security Appliance (ASA) Software could allow an unauthenticated, remote attacker to cause incoming TCP SYN packets to be dropped incorrectly.\r\n\r This vulnerability is due to improper handling of new, incoming TCP connections that are destined to management or data interfaces when the device is under a TCP SYN flood attack. An attacker could exploit this vulnerability by sending a crafted stream of traffic to an affected device. A successful exploit could allow the attacker to prevent all incoming TCP connections to the device from being established, including remote management access, Remote Access VPN (RAVPN) connections, and all network protocols that are TCP-based. This results in a denial of service (DoS) condition for affected features.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20100",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20100",
+      "description": "CVSS Score: 7.7\nSeverity: HIGH\n\nA vulnerability in the LUA interperter of the Remote Access SSL VPN feature of Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Secure Firewall Threat Defense (FTD) Software could allow an authenticated, remote attacker with a valid VPN connection to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition. This does not affect the management or MUS interfaces.\r\n\r This vulnerability is due to trusting user input without validation in the LUA interprerter. An attacker could exploit this vulnerability by sending crafted HTTP packets to the Remote Access SSL VPN server. A successful exploit could allow the attacker to cause the device to reload, resulting in a DoS condition.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20101",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20101",
+      "description": "CVSS Score: 8.6\nSeverity: HIGH\n\nA vulnerability in the SAML 2.0 single sign-on (SSO) feature of Cisco Secure Firewall ASA Software and Secure FTD Software could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a DoS condition.\r\n\r This vulnerability is due to insufficient error checking when processing SAML messages. An attacker could exploit this vulnerability by sending crafted SAML messages to the SAML service. A successful exploit could allow the attacker to cause the device to reload, resulting in a DoS condition.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20103",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20103",
+      "description": "CVSS Score: 8.6\nSeverity: HIGH\n\nA vulnerability in the Remote Access SSL VPN functionality of Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Secure Firewall Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to exhaust device memory resulting in a denial of service (DoS) condition to new Remote Access SSL VPN connections. This does not affect the management interface, though it may become temporarily unresponsive. \r\n\r This vulnerability is due to trusting user input without validation. An attacker could exploit this vulnerability by sending crafted packets to the Remote Access SSL VPN server. A successful exploit could allow the attacker to cause the device web interface to stop responding, resulting in a DoS condition.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20105",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20105",
+      "description": "CVSS Score: 7.7\nSeverity: HIGH\n\nA vulnerability in the Remote Access SSL VPN functionality of Cisco Secure Firewall Adaptive Security Appliance (ASA) Software and Secure Firewall Threat Defense (FTD) Software could allow an authenticated, remote attacker with a valid VPN connection to exhaust device memory resulting in a denial of service (DoS) condition.This does not affect the management or MUS interfaces.\r\n\r This vulnerability is due to trusting user input without validation. An attacker could exploit this vulnerability by sending crafted packets to the Remote Access SSL VPN server. A successful exploit could allow the attacker to cause the device to reload, resulting in a DoS condition.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20131",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20131",
+      "description": "CVSS Score: 10.0\nSeverity: CRITICAL\n\nA vulnerability in the web-based management interface of Cisco Secure Firewall Management Center (FMC) Software could allow an unauthenticated, remote attacker to execute arbitrary Java code as root&nbsp;on an affected device.\r\n\r\nThis vulnerability is due to insecure deserialization of a user-supplied Java byte stream. An attacker could exploit this vulnerability by sending a crafted serialized Java object to the web-based management interface of an affected device. A successful exploit could allow the attacker to execute arbitrary code on the device and elevate privileges to root.\r\nNote: If the FMC management interface does not have public internet access, the attack surface that is associated with this vulnerability is reduced.",
+      "priority": {
+        "name": "Highest"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20040",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20040",
+      "description": "CVSS Score: 8.8\nSeverity: HIGH\n\nA vulnerability in the CLI of Cisco IOS XR Software could allow an authenticated, local attacker to execute arbitrary commands as root on the underlying operating system of an affected device.\r\n\r\nThis vulnerability is due to insufficient validation of user arguments that are passed to specific CLI commands. An attacker with a low-privileged account could exploit this vulnerability by using crafted commands at the prompt. A successful exploit could allow the attacker to elevate privileges to root and execute arbitrary commands on the underlying operating system.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20046",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20046",
+      "description": "CVSS Score: 8.8\nSeverity: HIGH\n\nA vulnerability in task group assignment for a specific CLI command in Cisco IOS XR Software could allow an authenticated, local attacker to elevate privileges and gain full administrative control of an affected device.\r\n\r\nThis vulnerability is due to incorrect mapping of a command to task groups within the source code. An attacker with a low-privileged account could exploit this vulnerability by using the CLI command to bypass the task group&ndash;based checks. A successful exploit could allow the attacker to elevate privileges and perform actions on an affected device without authorization checks.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20074",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20074",
+      "description": "CVSS Score: 7.4\nSeverity: HIGH\n\nA vulnerability in the Intermediate System-to-Intermediate System (IS-IS) multi-instance routing feature of Cisco IOS XR Software could allow an unauthenticated, adjacent attacker to cause the IS-IS process to restart unexpectedly.\r\n\r\nThis vulnerability is due to insufficient input validation of ingress IS-IS packets. An attacker could exploit this vulnerability by sending crafted IS-IS packets to an affected device after forming an adjacency. A successful exploit could allow the attacker to cause the IS-IS process to restart unexpectedly, resulting in a temporary loss of connectivity to advertised networks and a denial of service (DoS) condition.\r\nNote: The IS-IS protocol is a routing protocol. To exploit this vulnerability, an attacker must be Layer 2-adjacent to the affected device and must have formed an adjacency.&nbsp;&nbsp;",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20004",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20004",
+      "description": "CVSS Score: 7.4\nSeverity: HIGH\n\nA vulnerability in the TLS library of Cisco IOS XE Software could allow an unauthenticated, adjacent attacker to exhaust the available memory of an affected device.\r\n\r This vulnerability is due to improper management of memory resources during TLS connection setup. An attacker could exploit this vulnerability by repeatedly triggering the conditions that cause the memory increase. This could be done in a variety of ways, such as by repeatedly attempting Extensible Authentication Protocol (EAP) authentication when local EAP is enabled on an affected device or by using a machine-in-the-middle attack and resetting TLS connections between the affected device and other devices. A successful exploit could allow the attacker to exhaust the available memory on an affected device, resulting in an unexpected reload and a denial of service (DoS) condition.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20012",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20012",
+      "description": "CVSS Score: 8.6\nSeverity: HIGH\n\nA vulnerability in the Internet Key Exchange version 2 (IKEv2) feature of Cisco IOS Software, Cisco IOS XE Software, Cisco Secure Firewall Adaptive Security Appliance (ASA) Software, and Cisco Secure Firewall Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to trigger a memory leak, resulting in a denial of service (DoS) condition on an affected device.\r\n\r This vulnerability is due to improper parsing of IKEv2 packets. An attacker could exploit this vulnerability by sending crafted IKEv2 packets to an affected device. A successful exploit of Cisco IOS Software and IOS XE Software could allow the attacker to cause the affected device to reload, resulting in a DoS condition. A successful exploit of Cisco Secure Firewall ASA Software and Secure FTD Software could allow the attacker to partially exhaust system memory, resulting in system instability, such as the inability to establish new IKEv2 VPN sessions. A manual reboot of the device is required to recover from this condition.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20084",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20084",
+      "description": "CVSS Score: 8.6\nSeverity: HIGH\n\nA vulnerability in the DHCP snooping feature of Cisco IOS XE Software could allow an unauthenticated, remote attacker to cause BOOTP packets to be forwarded between VLANs, resulting in a denial of service (DoS) condition. \r\n\r This vulnerability is due to improper handling of BOOTP packets on Cisco Catalyst 9000 Series Switches. An attacker could exploit this vulnerability by sending BOOTP request packets to an affected device. A successful exploit could allow an attacker to forward BOOTP packets from one VLAN to another, resulting in BOOTP VLAN leakage and potentially leading to high CPU utilization. This makes the device unreachable (either through console or remote management) and unable to forward traffic, resulting in a DoS condition. \r\n\r Note: This vulnerability can be exploited with either unicast or broadcast BOOTP packets.\r\n\r   There are workarounds that address this vulnerability.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20086",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20086",
+      "description": "CVSS Score: 8.6\nSeverity: HIGH\n\nA vulnerability in the processing of Control and Provisioning of Wireless Access Points (CAPWAP) packets of Cisco IOS XE Wireless Controller Software for the Catalyst CW9800 Family could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.\r\n\r This vulnerability is due to improper handling of a malformed CAPWAP packet. An attacker could exploit this vulnerability by sending a malformed CAPWAP packet to an affected device. A successful exploit could allow the attacker to cause the affected device to reload unexpectedly, resulting in a DoS condition.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20125",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20125",
+      "description": "CVSS Score: 7.7\nSeverity: HIGH\n\nA vulnerability in the HTTP Server feature of Cisco IOS Software and Cisco IOS XE Software Release 3E could allow an authenticated, remote attacker to cause an affected device to reload unexpectedly, resulting in a denial of service (DoS) condition.\r\n\r This vulnerability is due to improper validation of user-supplied input. An attacker could exploit this vulnerability by sending malformed HTTP requests to an affected device. A successful exploit could allow the attacker to cause a watchdog timer to expire and the device to reload, resulting in a DoS condition. To exploit this vulnerability, the attacker must have a valid user account.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20093",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20093",
+      "description": "CVSS Score: 9.8\nSeverity: CRITICAL\n\nA vulnerability in the change password functionality of Cisco Integrated Management Controller (IMC) could allow an unauthenticated, remote attacker to bypass authentication and gain access to the system as&nbsp;Admin.\r\n\r\nThis vulnerability is due to incorrect handling of password change requests. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. A successful exploit could allow the attacker to bypass authentication, alter the passwords of any user on the system, including an&nbsp;Admin user, and gain access to the system as that user.",
+      "priority": {
+        "name": "Highest"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20094",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20094",
+      "description": "CVSS Score: 8.8\nSeverity: HIGH\n\nA vulnerability in the web-based management interface of Cisco IMC could allow an authenticated, remote attacker with read-only privileges to perform command injection attacks on an affected system and execute arbitrary commands as the root user.\r\n\r\nThis vulnerability is due to improper validation of user-supplied input. An attacker could exploit this vulnerability by sending crafted commands to the web-based management interface of the affected software. A successful exploit could allow the attacker to execute arbitrary commands on the underlying operating system as the root user.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20151",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20151",
+      "description": "CVSS Score: 7.3\nSeverity: HIGH\n\nA vulnerability in the web interface of Cisco Smart Software Manager On-Prem (SSM On-Prem) could allow an authenticated, remote attacker to elevate privileges on an affected system.\r\n\r\nThis vulnerability is due to the improper transmission of sensitive user information. An attacker could exploit this vulnerability by sending a crafted message to an affected Cisco SSM On-Prem host and retrieving session credentials from subsequent status messages. A successful exploit could allow the attacker to elevate privileges on the affected system from low to administrative.\r\nTo exploit this vulnerability, the attacker must have valid credentials for a user account with at least the role of System User.\r\nNote: This vulnerability exposes information only about users who logged in to the Cisco SSM On-Prem host using the web interface and who are currently logged in. SSH sessions are not affected.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20155",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20155",
+      "description": "CVSS Score: 8.0\nSeverity: HIGH\n\nA vulnerability in the web-based management interface of Cisco Evolved Programmable Network Manager (EPNM) could allow an authenticated, remote attacker with low privileges to access sensitive information that they are not authorized to access.\r\n\r\nThis vulnerability is due to improper authorization checks on a REST API endpoint of an affected device.&nbsp;An attacker could exploit this vulnerability by querying the affected endpoint. A successful exploit could allow the attacker to view session information of active Cisco EPNM users, including users with administrative privileges, which could result in the affected device being compromised.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20160",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20160",
+      "description": "CVSS Score: 9.8\nSeverity: CRITICAL\n\nA vulnerability in Cisco Smart Software Manager On-Prem (SSM On-Prem) could allow an unauthenticated, remote attacker to execute arbitrary commands on the underlying operating system of an affected SSM On-Prem host.\r\n\r\nThis vulnerability is due to the unintentional exposure of an&nbsp;internal service. An attacker could exploit this vulnerability by sending a crafted request to the API of the exposed service. A successful exploit could allow the attacker to execute commands on the underlying operating system with root-level privileges.",
+      "priority": {
+        "name": "Highest"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20147",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20147",
+      "description": "CVSS Score: 9.9\nSeverity: CRITICAL\n\nA vulnerability in Cisco ISE and Cisco ISE-PIC could allow an authenticated, remote attacker to execute arbitrary commands on the underlying operating system of an affected device. To exploit this vulnerability, the attacker must have valid administrative credentials.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. A successful exploit could allow the attacker to obtain user-level access to the underlying operating system and then elevate privileges to root. In single-node ISE deployments, successful exploitation of this vulnerability could cause the affected ISE node to become unavailable, resulting in a denial of service (DoS) condition. In that condition, endpoints that have not already authenticated would be unable to access the network until the node is restored.",
+      "priority": {
+        "name": "Highest"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20180",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20180",
+      "description": "CVSS Score: 9.9\nSeverity: CRITICAL\n\nA vulnerability in Cisco Identity Services Engine (ISE) could allow an authenticated, remote attacker to execute arbitrary commands on the underlying operating system of an affected device. To exploit this vulnerability, the attacker must have at least Read Only Admin credentials.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. A successful exploit could allow the attacker to obtain user-level access to the underlying operating system and then elevate privileges to&nbsp;root. In single-node ISE deployments, successful exploitation of these vulnerabilities could cause the affected ISE node to become unavailable, resulting in a denial of service (DoS) condition. In that condition, endpoints that have not already authenticated would be unable to access the network until the node is restored.",
+      "priority": {
+        "name": "Highest"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20184",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20184",
+      "description": "CVSS Score: 9.8\nSeverity: CRITICAL\n\nA vulnerability in the integration of single sign-on (SSO) with Control Hub in Cisco Webex Services could have allowed an unauthenticated, remote attacker to impersonate any user within the service.\r\n\r\nThis vulnerability existed because of improper certificate validation. Prior to this vulnerability being addressed, an attacker could have exploited this vulnerability by connecting to a service endpoint and supplying a crafted token. A successful exploit could have allowed the attacker to gain unauthorized access to legitimate Cisco Webex services.",
+      "priority": {
+        "name": "Highest"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20186",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20186",
+      "description": "CVSS Score: 9.9\nSeverity: CRITICAL\n\nA vulnerability in Cisco Identity Services Engine (ISE) could allow an authenticated, remote attacker to execute arbitrary commands on the underlying operating system of an affected device. To exploit this vulnerability, the attacker must have at least Read Only Admin credentials.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. A successful exploit could allow the attacker to obtain user-level access to the underlying operating system and then elevate privileges to&nbsp;root. In single-node ISE deployments, successful exploitation of these vulnerabilities could cause the affected ISE node to become unavailable, resulting in a denial of service (DoS) condition. In that condition, endpoints that have not already authenticated would be unable to access the network until the node is restored.",
+      "priority": {
+        "name": "Highest"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-5944",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-5944",
+      "description": "CVSS Score: 8.2\nSeverity: HIGH\n\nAn improper access control vulnerability exists in the Cisco Intersight Device Connector for Nutanix Prism Central. The service exposes an API passthrough endpoint on TCP port 7373 that is accessible within the network scope of the deployment environment without authentication.\n\n\n\nAn unauthenticated attacker with network access can exploit this vulnerability by sending crafted requests to the exposed endpoint to enumerate cluster metadata, including virtual machine information and cluster configuration details. While the API primarily supports read-only operations, it also allows certain cluster maintenance workflows to be invoked.\n\n\n\nAlthough this vulnerability does not allow persistent modification of system configurations or access to credentials or sensitive user data, successful exploitation may result in disruption of active workloads, leading to loss of service availability within the affected environment.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20034",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20034",
+      "description": "CVSS Score: 8.8\nSeverity: HIGH\n\nA vulnerability in the web-based management interface of Cisco Unity Connection could allow an authenticated, remote attacker to execute arbitrary code on an affected device.\r\n\r\nThis vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by submitting a crafted API request. A successful exploit could allow the attacker to execute arbitrary code as root, possibly resulting in the complete compromise of a targeted device.&nbsp;To exploit this vulnerability, the attacker must have valid user credentials on the affected device.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20035",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20035",
+      "description": "CVSS Score: 7.2\nSeverity: HIGH\n\nA vulnerability in the web UI of Cisco Unity Connection Web Inbox could allow an unauthenticated, remote attacker to conduct SSRF attacks through an affected device.\r\n\r\nThis vulnerability is due to improper input validation for specific HTTP requests. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. A successful exploit could allow the attacker to send arbitrary network requests that are sourced from the affected device.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20167",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20167",
+      "description": "CVSS Score: 7.7\nSeverity: HIGH\n\nA vulnerability in the web-based management interface of Cisco IoT Field Network Director could allow an authenticated, remote attacker with low privileges to cause a DoS condition on a remotely managed router.\r\n\r\nThis vulnerability is due to improper error handling. An attacker could exploit this vulnerability by submitting crafted input to the web-based management interface. A successful exploit could allow the attacker to request unauthorized files from a remote router, causing the router to reload and resulting in a DoS condition.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20185",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20185",
+      "description": "CVSS Score: 7.7\nSeverity: HIGH\n\nA vulnerability in the Simple Network Management Protocol (SNMP) subsystem of&nbsp;Cisco 350 Series Managed Switches (SG350) and Cisco 350X Series Stackable Managed Switches (SG350X)&nbsp;firmware could allow an authenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.&nbsp;\r\n\r\nThis vulnerability is due to improper error handling when parsing response data for a specific SNMP request. An attacker could exploit this vulnerability by sending a specific SNMP request to an affected device. A successful exploit could allow the attacker to cause the device to reload unexpectedly, resulting in a DoS condition.\r\nThis vulnerability affects SNMP versions 1, 2c, and 3. To exploit this vulnerability through SNMPv2c or earlier, the attacker must know a valid read-write or read-only SNMP community string for the affected system. To exploit this vulnerability through SNMPv3, the attacker must have valid SNMP user credentials for the affected system.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20182",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20182",
+      "description": "CVSS Score: 10.0\nSeverity: CRITICAL\n\nMay 2026: This security advisory provides the details and fix information for a vulnerability that was discovered and fixed after the  was disclosed in February 2026. This new advisory is for a new vulnerability in the control connection handshaking. The  section of this advisory includes Show Control Connections guidance to help with system checks.&nbsp;\r\n\r\nA vulnerability in the peering authentication in Cisco Catalyst SD-WAN Controller, formerly SD-WAN vSmart, and Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an unauthenticated, remote attacker to bypass authentication and obtain administrative privileges on an affected system.\r\nThis vulnerability exists because the peering authentication mechanism in an affected system is not working properly. An attacker could exploit this vulnerability by sending crafted requests to the affected system. A successful exploit could allow the attacker to log in to an affected Cisco Catalyst SD-WAN Controller as an internal, high-privileged, non-root user account. Using this account, the attacker could access NETCONF, which would then allow the attacker to manipulate network configuration for the SD-WAN fabric.",
+      "priority": {
+        "name": "Highest"
+      }
+    }
+  },
+  {
+    "cve_id": "CVE-2026-20224",
+    "fields": {
+      "project": {
+        "key": "SEC"
+      },
+      "issuetype": {
+        "name": "Bug"
+      },
+      "summary": "Cisco vulnerability: CVE-2026-20224",
+      "description": "CVSS Score: 8.6\nSeverity: HIGH\n\nA vulnerability in the web UI of Cisco Catalyst SD-WAN Manager, formerly SD-WAN vManage, could allow an unauthenticated, remote attacker to read arbitrary files that are stored in an affected system. The attacker does not need to have valid user credentials.\r\n\r\nThis vulnerability is due to improper handling of XML External Entity (XXE) entries when parsing an XML file. An attacker could exploit this vulnerability by sending a crafted request to an affected system. A successful exploit could allow the attacker to read arbitrary files that are stored in the affected system.",
+      "priority": {
+        "name": "High"
+      }
+    }
+  }
+]
